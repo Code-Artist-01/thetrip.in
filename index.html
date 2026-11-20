@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>thetrip.in — Premium Tour & Travel Packages</title>
-<meta name="description" content="Handcrafted domestic & international tour packages with 24x7 support. Book Kerala, Bali, Dubai, Maldives, Switzerland and more.">
+<meta name="description" content="Handcrafted domestic & international tour packages with 24x7 support. Book Kedarnath, vanarasi, MANALI and more.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +25,11 @@
   --ink:#12212E;
   --muted:#6B7A88;
   --line:#E7E2D9;
-  --green:#25D366;
+  --green:#0dd456;
   --logo-blue:#1462A8;
   --radius:18px;
   --radius-sm:12px;
-  --shadow-sm:0 4px 18px rgba(10,29,46,.07);
+  --shadow-sm:0 4px 18px rgba(17, 52, 82, 0.07);
   --shadow-md:0 14px 40px rgba(10,29,46,.12);
   --shadow-lg:0 30px 70px rgba(10,29,46,.22);
   --ease:cubic-bezier(.22,.61,.36,1);
@@ -680,12 +680,20 @@ h3{font-size:clamp(1.15rem,1.7vw,1.4rem)}
    TOAST
    ========================================================= */
 .toast{
-  position:fixed;left:50%;bottom:30px;transform:translate(-50%,140%);
+  position:fixed;left:50%;bottom:30px;
+  transform:translate(-50%, 20px); /* Niche push karne ki jagah thoda niche se slide hoga */
   background:var(--navy);color:#fff;padding:.9rem 1.5rem;border-radius:100px;
   font-size:.87rem;font-weight:700;z-index:900;box-shadow:var(--shadow-lg);
-  transition:transform .45s var(--ease);max-width:90vw;text-align:center;
+  transition:all .45s var(--ease);max-width:90vw;text-align:center;
+  opacity: 0; /* Jab khali ho toh puri tarah invisible ho jaye */
+  visibility: hidden;
+  pointer-events: none;
 }
-.toast.show{transform:translate(-50%,0)}
+.toast.show{
+  transform: translate(-50%, 0);
+  opacity: 1; /* Jab message aaye tabhi dikhe */
+  visibility: visible;
+}
 
 /* =========================================================
    REVEAL ANIMATIONS
@@ -765,9 +773,9 @@ h3{font-size:clamp(1.15rem,1.7vw,1.4rem)}
     <a href="#home" class="logo" aria-label="Home">
       <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <!-- Map Pin -->
-        <path d="M50 6C26 6 8 26 8 50C8 78 50 96 50 96C50 96 92 78 92 50C92 26 74 6 50 6Z" fill="currentColor"/>
+        <path d="M50 6C26 6 8 26 8 50C8 78 50 96 50 96C50 96 92 78 92 50C92 26 74 6 50 6Z" fill="#1462A8"/>
         <!-- Airplane (scaled, rotated, positioned inside pin) -->
-        <g transform="translate(50, 48) scale(0.85) rotate(45) translate(-12, -12)">
+        <g transform="translate(50, 48) scale(2.90) rotate(60) translate(-12, -12)">
           <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="#ffffff"/>
         </g>
       </svg>
@@ -800,7 +808,7 @@ h3{font-size:clamp(1.15rem,1.7vw,1.4rem)}
     <!-- HERO -->
     <section class="hero">
       <div class="hero-bg">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80"
+        <img src="https://wallpapercave.com/wp/wp11476007.gif"
              alt="Tropical beach" onerror="this.onerror=null;this.src='https://picsum.photos/seed/hero/1900/1200'">
       </div>
       <div class="container hero-inner">
@@ -1152,8 +1160,8 @@ h3{font-size:clamp(1.15rem,1.7vw,1.4rem)}
       <div class="footer-brand">
         <a href="#home" class="logo">
           <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 6C26 6 8 26 8 50C8 78 50 96 50 96C50 96 92 78 92 50C92 26 74 6 50 6Z" fill="currentColor"/>
-            <g transform="translate(50, 48) scale(0.85) rotate(45) translate(-12, -12)">
+            <path d="M50 6C26 6 8 26 8 50C8 78 50 96 50 96C50 96 92 78 92 50C92 26 74 6 50 6Z" fill="#1462A8"/>
+            <g transform="translate(50, 48) scale(2.90) rotate(60) translate(-12, -12)">
               <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="#ffffff"/>
             </g>
           </svg>
@@ -1200,15 +1208,15 @@ h3{font-size:clamp(1.15rem,1.7vw,1.4rem)}
         <ul>
           <li><a id="fPhoneLink">—</a></li>
           <li><a id="fEmailLink">—</a></li>
-          <li><a id="fWaLink" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a id="fWaLink" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><span id="fAddress" style="font-size:.86rem"></span></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> <span id="fBrand">thetrip.in</span>. All rights reserved.</span>
-      <span>Designed with ♥ for travellers</span>
+      <span>© <span id="year"></span> <span id="fBrand">thetrip.in </span> - All rights reserved.</span>
+      <span>Designed with  ♥  for travellers</span>
     </div>
   </div>
 </footer>
@@ -1251,7 +1259,7 @@ const CONFIG = {
   email        : "adarsh.prajapati560462@gmail.com",
 
   address      : "J 1/54 Daranagr DAV College Road Varanasi Uttar Pradesh 221001",
-  hours        : "24*7",
+  hours        : "24×7",
 
   /* ---- SOCIAL LINKS (leave "" to hide) ---- */
   instagram    : "https://www.instagram.com/thetrip.in/",
@@ -1269,40 +1277,35 @@ const CONFIG = {
 --------------------------------------------------------------------------- */
 const PACKAGES = [
 
-  /* ---------------------------- 1. KERALA ---------------------------- */
+  /* ---------------------------- 1. Uttrakhand ---------------------------- */
   {
-    id: "kerala",
-    title: "Kerala Backwaters Escape",
-    destination: "Munnar • Alleppey • Kochi",
+    id: "Uttrakhand",
+    title: "Uttrakhand Tour Package",
+    destination: "Delhi • Haridwar • Rishikesh • Mussoorie • Delhi",
     country: "India",
-    duration: "6 Days / 5 Nights",
-    days: 6,
-    price: 24999,
-    oldPrice: 31999,
+    duration: "05 Days / 04 Night",
+    days: 5,
+    price: 65000,
+    oldPrice: 85000,
     rating: 4.8,
     reviews: 214,
     badge: "Bestseller",
     featured: true,
     categories: ["Domestic", "Honeymoon", "Hill Station"],
-    summary: "Tea gardens, misty hills and a private houseboat cruise through the tranquil backwaters of God's Own Country.",
-    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80",
+    summary: " ",
+    image: "https://plus.unsplash.com/premium_photo-1697729690458-2d64ca777c04?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     highlights: [
-      "Private premium houseboat in Alleppey",
-      "Munnar tea plantation & Eravikulam National Park",
-      "Kathakali & Kalaripayattu cultural show",
-      "Fort Kochi heritage walk",
-      "All transfers in private AC vehicle"
+      "1 – 07 seater Cab: Delhi Airport / Rly Stn /Bus Stop/Won Destination – Pickup – H a r i d w a r /Rishikesh /Mussoorie/ sightseeing – Delhi Airport / Rly Stn /Bus Stop/Won Destination – Drop"
     ],
     itinerary: [
-      { day: "Day 1", title: "Arrival in Kochi", desc: "Airport pickup, hotel check-in and an evening stroll through Fort Kochi's colonial streets and Chinese fishing nets." },
-      { day: "Day 2", title: "Kochi → Munnar", desc: "Scenic 4-hour drive through spice plantations. Afternoon at leisure with a visit to a tea museum." },
-      { day: "Day 3", title: "Munnar Sightseeing", desc: "Eravikulam National Park, Mattupetty Dam, Echo Point and Top Station viewpoint." },
-      { day: "Day 4", title: "Munnar → Alleppey", desc: "Board your private houseboat by noon. Cruise the backwaters with freshly prepared Kerala meals on board." },
-      { day: "Day 5", title: "Alleppey → Kochi", desc: "Morning cruise, disembark and drive back to Kochi. Evening cultural performance." },
-      { day: "Day 6", title: "Departure", desc: "Breakfast and airport transfer with sweet memories." }
+      { day: "Day 1", title: "Pick up Delhi to Haridwar", desc: "Our services will start with your arrival at Delhi Airport/ Railway Station. Pick up from the airport & drive to Haridwar by Personal Car. After arrive check in hotel after some rest Visit Haridwar Sightseeing Jungle Safari Adventure(at Raja ji National Park) , Mansa Devi Temple and Chandi Devi Temple By Cable. after Visit Evening visit Har Ki Pauri for famous Ganga Aarti , Daksh Temple, Pawan Dham & Maya Devi Temple . Dinner and Overnight stay at Hotel." },
+      { day: "Day 2", title: "Haridwar to Rishikesh", desc: "After breakfast checkout from hotel and ready to visit Rishikesh. Later explore local temple and Market of Rishikesh. Evening join Ganga aarti at Swarg Ashram. Laxman Jhula, Ram Jhula and Swarg Ashram. Ganga aarti at Swarg Ashram after visit come back hotel Enjoy Dinner & overnight at Hotel." },
+      { day: "Day 3", title: "Rishikesh to Mussoorie", desc: "After breakfast checkout from hotel and ready to Visit Mussoorie Lake , Mall Road , Mussoorie Lake Mist and Kempty Falls. You can also visit Jwala ji Temple on the way to Kempty falls, but please note it involves a fair amount of walking/hiking and may not be suitable for all. After sightseeing return back to hotel enjoy dinner and night stay at hotel." },
+      { day: "Day 4", title: "Mussoorie to Dehradun sightseeing", desc: "After breakfast ready to visit Dehradun sightseeing Tibetan Buddhist Temple, Zonal Museum , Robber’s Cave, Forest Research Institute,Tapkeshwar Temple, Shopping at Rajpur Road. After sightseeing return back to hotel enjoy dinner and night stay at hotel." },
+      { day: "Day 5", title: "Mussoorie to Delhi drop", desc: "After breakfast checkout from hotel and transfer to Delhi Railway Station / Airport. Board your train/flight for your onward destination with heart-warming memories of alluring Uttarakhand." }
     ],
-    inclusions: ["5 nights accommodation (3★/4★)", "Daily breakfast + 4 dinners", "Private AC vehicle with driver", "Houseboat stay with all meals", "All entry tickets & permits", "24×7 trip manager"],
-    exclusions: ["Airfare / train tickets", "Lunch & personal expenses", "Travel insurance", "Anything not in inclusions"]
+    inclusions: ["Accommodation as per the plan.", "Transfers and sightseeing in the private air-conditioned vehicle as per itinerary", "Breakfast, Dinner are available for all Resorts/Hotels on Map Plan Basis. Accommodation and Breakfast, Dinner", "Inclusive of all tolls and taxes", "All the Driver allowance Fuel charges and Parking Charges are Included.", "State Tax."],
+    exclusions: ["Any Meals other than inclusions", "Personal expenses such as tips, telephone calls, room service, etc.", "Entry to any monument, guide charges and any similar charges not included in above package. Anything which is not included in the package.", "Boat Transfers, Flight & train ticket.","Gst 5%"]
   },
 
   /* ----------------------------- 2. BALI ----------------------------- */
@@ -1944,7 +1947,7 @@ function openModal(id) {
           <small>Starting from</small>
           <span class="now">${fmt(p.price)}</span>
           ${p.oldPrice ? `<span class="old">${fmt(p.oldPrice)}</span>` : ""}
-          <small style="margin-top:2px">per person · twin sharing</small>
+          <small style="margin-top:2px"> 04 Adult With + 02 Kids</small>
         </div>
         <div class="m-actions">
           <a class="btn-wa" href="${waLink(p)}" target="_blank" rel="noopener">${waIcon} WhatsApp</a>
